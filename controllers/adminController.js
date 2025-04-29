@@ -70,7 +70,7 @@ exports.registerAdmin = async (req, res) => {
     // Create JWT token
     const payload = { admin: { id: admin.id } };
     const token = jwt.sign(payload, process.env.JWT_SECRET, {
-      expiresIn: "24h",
+      expiresIn: "230h",
     });
 
     res.status(201).json({ token });
